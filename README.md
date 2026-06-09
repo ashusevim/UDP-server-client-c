@@ -1,0 +1,1 @@
+# Implementing a minimal UDP client and server in c that can send and receive messages.
