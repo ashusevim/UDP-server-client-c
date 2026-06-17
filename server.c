@@ -54,8 +54,11 @@ int main() {
 
 		printf("Received from %s:%d -> %s\n", inet_ntoa(client_addr.sin_addr), ntohs(client_addr.sin_port), buffer);
 
-		char *reply = "Message Received";
+		char *reply = "Message Received(server)";
 
-		sendto(sockfd, reply, strlen(reply), 0, (struct sockaddr *)&client_addr, client_len);
-	}
+        sendto(sockfd, reply, strlen(reply), 0, (struct sockaddr *)&client_addr, client_len);
+    }
+
+    close(sockfd);
+    return 0;
 }
