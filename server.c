@@ -16,7 +16,6 @@ int main() {
 	char buffer[BUFFER_SIZE];
 	socklen_t client_len = sizeof(client_addr);
 
-
 	sockfd = socket(AF_INET, SOCK_DGRAM, 0);
 
 	if(sockfd < 0){
